@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
-import Todolist from './Todolist';
 import { uuid }  from 'uuidv4';
-import { TodoModel } from './types/todo';
+import Todolist from './components/Todolist';
+import { TodoModel } from './types/todo.model';
 
 interface AppState {
   todos: TodoModel[];
