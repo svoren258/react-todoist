@@ -3,9 +3,9 @@ import React from "react";
 import { TodoModel } from "../types/todo.model";
 import './Todo.scss';
 import fontawesome from '@fortawesome/fontawesome';
-import { faCheckSquare, faCoffee, faTrash } from '@fortawesome/fontawesome-free-solid';
+import { faTrash } from '@fortawesome/fontawesome-free-solid';
 
-fontawesome.library.add(faCheckSquare, faCoffee, faTrash);
+fontawesome.library.add(faTrash);
 
 interface Props {
     todo: TodoModel;
