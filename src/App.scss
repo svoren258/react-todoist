@@ -1,0 +1,51 @@
+$primary-color: #F69E3E;
+
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    height: 15px;
+    background: none;
+    border: 1px solid white;
+    padding: 5px;
+
+    &::placeholder {
+        color: white;
+    }
+
+    &:focus {
+        background-color: $primary-color;
+    }
+}
+
+.add-button-container {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border: 3px solid #F69E3E;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    color: #F69E3E;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    &:hover {
+        background-color: #F69E3E;
+        color: white;
+    }
+
+    &:focus {
+        border: none;
+    }
+}

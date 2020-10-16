@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { uuid }  from 'uuidv4';
 import Todolist from './components/Todolist';
 import { TodoModel } from './types/todo.model';
+import './App.scss';
 
 interface AppState {
   todos: TodoModel[];
@@ -13,7 +14,7 @@ const App: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const addTodo = () => {
-    if (inputRef != null && inputRef.current) {
+    if (inputRef != null && inputRef.current && inputRef.current.value) {
       setState({
         ...state,
         todos: [
@@ -45,10 +46,10 @@ const App: React.FC = () => {
   };
   
   return (
-    <div>
+    <div className="main-container">
       <Todolist todos={state.todos} toggleTodo={ toggleTodo } deleteTodo={ deleteTodo }></Todolist>
-      <input type="text" ref={inputRef}/>
-      <button onClick={addTodo}>Add Todo</button>
+      <input className="input-container" type="text" ref={inputRef} placeholder="Type here"/>
+      <button className="add-button-container" onClick={addTodo}>Add Todo</button>
     </div>
   );
 };
