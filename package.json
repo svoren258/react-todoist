@@ -17,6 +17,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/uuid": "^8.3.0",
     "eslint-config-prettier": "^6.13.0",
+    "husky": "^4.3.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.2",
     "react": "^16.14.0",
@@ -33,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier --write --ignote-unknown"
+      "pre-commit": "yarn prettier --write --ignore-unknown"
     }
   },
   "eslintConfig": {
