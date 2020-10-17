@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect, useState, FC } from "react";
 import Todolist from "./components/Todolist";
 import { TodoModel } from "./types/todo.model";
 import "./App.scss";
@@ -9,7 +9,7 @@ interface AppState {
   todos: TodoModel[];
 }
 
-const App: React.FC = () => {
+const App: FC = () => {
   const localStorageState = localStorage.getItem("state");
   const parsedState = localStorageState
     ? JSON.parse(localStorageState)
@@ -32,7 +32,7 @@ const App: React.FC = () => {
             id: v4(),
             name: inputRef.current.value,
             completed: false,
-            created: new Date().toLocaleString(),
+            createdAt: new Date().toLocaleString(),
           },
         ],
       });

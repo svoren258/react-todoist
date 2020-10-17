@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import Todo from "./Todo";
 import { TodoModel } from "../types/todo.model";
 import "./Todolist.scss";
@@ -9,7 +9,7 @@ interface Props {
   deleteTodo: (id: string) => void;
 }
 
-const Todolist: React.FC<Props> = ({ todos, toggleTodo, deleteTodo }) => {
+const Todolist: FC<Props> = ({ todos, toggleTodo, deleteTodo }) => {
   return (
     <div className="todolist-container">
       {todos.map((todo) => (

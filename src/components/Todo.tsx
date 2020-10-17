@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { FC } from "react";
 import { TodoModel } from "../types/todo.model";
 import "./Todo.scss";
 
@@ -9,7 +9,7 @@ interface Props {
   deleteTodo: (id: string) => void;
 }
 
-const Todo: React.FC<Props> = ({ todo, toggleTodo, deleteTodo }) => {
+const Todo: FC<Props> = ({ todo, toggleTodo, deleteTodo }) => {
   const onChange = () => {
     toggleTodo(todo.id);
   };
@@ -26,7 +26,7 @@ const Todo: React.FC<Props> = ({ todo, toggleTodo, deleteTodo }) => {
         checked={todo.completed}
         onChange={onChange}
       />
-      <p className="date">{todo.created}</p>
+      <p className="date">{todo.createdAt}</p>
       <p className="todo-item">{todo.name}</p>
       <FontAwesomeIcon className="delete-icon" onClick={onClick} icon="trash" />
     </div>
